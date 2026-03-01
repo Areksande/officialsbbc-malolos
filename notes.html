@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,200,1,0" />
+    <link rel="icon" type="image/png" href="weblogo.png">
+    <title>Notes</title>
+    
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">SBBCM</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="content.html">Preaching</a>
+            <a href="index.html#manuals">Manuals</a>
+        </nav>
+    </header>
+
+    <header class="po">
+        <h1 class="dm_txt">Sbbcm Notes</h1>
+        <button class="add-note-btn" onclick="openNoteDialog()">+ Add Note</button>
+        <button id="themeToggleBtn" class="theme-toggle-btn" >Dark Mode 🌙</button>
+    </header>
+
+    <main id="notesContainer" class="notes-grid">
+
+    </main>
+        <dialog id="noteDialog">
+            <div class="dialog-content">
+                <div class="dialog-header">
+                    <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
+                    <button class="close-btn" onclick="closeNoteDialog()">x</button>
+                </div>
+                <form class="note-form" id="noteForm">
+                    <div class="form-group">
+                        <label for="noteTitle" class="form-label">Title</label>
+                        <input type="text" id="noteTitle" class="form-input" placeholder="Enter Note Title..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="noteContent" class="form-label">Content</label>
+                        <textarea id="noteContent" class="form-textarea" placeholder="Write Your Note Here..." required></textarea>
+                    </div>
+                    
+                    <div class="dialog-actions">
+                        <button type="button" class="cancel-btn" onclick="closeNoteDialog()">Cancel</button>
+                        <button type="submit" class="save-btn">Save Note</button>
+                    </div>
+                </form>
+            </div>
+        </dialog>
+    <script src="script.js" defer></script>
+</body>
+</html>
