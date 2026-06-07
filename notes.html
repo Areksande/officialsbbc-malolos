@@ -35,7 +35,7 @@
                     <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
                     <button class="close-btn" onclick="closeNoteDialog()">x</button>
                 </div>
-                <form class="note-form" id="noteForm">
+                <form class="note-form" id="noteForm"onsubmit="saveNote(event)">
                     <div class="form-group">
                         <label for="noteTitle" class="form-label">Title</label>
                         <input type="text" id="noteTitle" class="form-input" placeholder="Enter Note Title..." required>
