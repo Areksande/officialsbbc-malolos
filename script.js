@@ -11,7 +11,7 @@ document.querySelectorAll('.slider-nav a').forEach((dot, index) => {
 function getVerse() {
     const verse = document.getElementById("verse").value;
 
-    fetch(`https://bible-api.com/${verse}?translation=kjv`)
+    fetch(`https://bible-api.com{verse}?translation=kjv`)
         .then(response => response.json())
         .then(data => {
             document.getElementById("result").innerHTML = `
@@ -39,6 +39,7 @@ function loadNotes() {
 
 function saveNote(event) {
     event.preventDefault();
+    event.stopImmediatePropagation(); // Prevents double submission if triggered twice
 
     const title = document.getElementById('noteTitle').value.trim();
     const content = document.getElementById('noteContent').value.trim();
@@ -84,8 +85,8 @@ function renderNotes() {
         noteCard.className = "note-card";
 
         noteCard.innerHTML = `
-            <h3 class="note-title">${note.title}</h3>
-            <p class="note-content">${note.content}</p>
+            <h3 class="note-title"></h3>
+            <p class="note-content"></p>
 
             <div class="note-actions">
                 <button class="edit-btn" onclick="openNoteDialog('${note.id}')" title="Edit Note">
@@ -97,6 +98,10 @@ function renderNotes() {
                 </button>
             </div>
         `;
+
+        // Safely inject text values without executing HTML code
+        noteCard.querySelector('.note-title').textContent = note.title;
+        noteCard.querySelector('.note-content').textContent = note.content;
 
         // Add card to grid
         notesContainer.appendChild(noteCard);
@@ -154,9 +159,9 @@ document.addEventListener('DOMContentLoaded', function () {
     notes = loadNotes()
     renderNotes()
 
-    document
-        .getElementById('noteForm')
-        .addEventListener('submit', saveNote);
+    // Fixed double listener bug by making sure it only applies once
+    const noteForm = document.getElementById('noteForm');
+    noteForm.onsubmit = saveNote; 
 
     document
         .getElementById('noteDialog')
