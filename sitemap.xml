@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://sbbcm.vercel.app/</loc>
+    </url>
+
+    <!-- About -->
+    <url>
+        <loc>https://sbbcm.vercel.app/tracts</loc>
+    </url>
+
+    <!-- Events -->
+    <url>
+        <loc>https://sbbcm.vercel.app/tested</loc>
+    </url>
+
+    <!-- Contact -->
+    <url>
+        <loc>https://sbbcm.vercel.app/statement</loc>
+    </url>
+
+    <!-- Ministry -->
+    <url>
+        <loc>https://sbbcm.vercel.app/settle</loc>
+    </url>
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/rps</loc>
+    </url>
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/reports</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/preaching</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/paglago</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/oath</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/ministrymanual</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/hostingform</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/content</loc>
+    </url>
+
+  
+    <url>
+        <loc>https://sbbcm.vercel.app/MNO</loc>
+    </url>
+
+</urlset>
